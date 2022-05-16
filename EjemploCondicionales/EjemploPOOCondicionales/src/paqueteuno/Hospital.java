@@ -36,7 +36,7 @@ public class Hospital {
         // para este tipo de hospitales la ciudad por defecto será Quito
         ciudadHospital = "Quito";
         // presupuesto anual será de 250 mil dolares con 10 centavos
-        presupuestoAnual = 250000.10;
+        presupuestoAnual = 250000.10;//Presupuesto anual es por defecto
     }
     
     // Objetos para opción 3
@@ -92,8 +92,23 @@ public class Hospital {
     public double obtenerPresupuestoAnual(){
         return presupuestoAnual;
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        
+        String cd = String.format(
+                        "Datos Hospital\n"
+                        + "Nombre del hospital: %s\n"
+                        + "Ciudad del hospital: %s\n"
+                        + "Número de camas: %d\n"
+                        + "Número de doctores: %d\n"
+                        + "Presupuesto anual: %.2f\n",
+                        obtenerNombreHospital(),
+                        obtenerCiudadHospital(),
+                        obtenerNumeroCamas(),
+                        obtenerNumeroDoctores(),
+                        obtenerPresupuestoAnual()
+        );
+        return cd;
+    }
 }

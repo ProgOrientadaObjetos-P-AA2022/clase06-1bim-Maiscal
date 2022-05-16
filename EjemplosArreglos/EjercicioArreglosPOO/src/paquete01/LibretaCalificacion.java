@@ -25,7 +25,7 @@ public class LibretaCalificacion {
         estudiante = n;
     }
 
-    public void establecerPromedio() {
+    public void establecerPromedio() {// se lo podria llamar promedio.. en ves de utilizar el establecer..
         double suma = 0;
 
         // for (int i = 0; i < calificaciones.length; i++) {
@@ -83,13 +83,17 @@ public class LibretaCalificacion {
     @Override
     public String toString() {
         String cadena = "Libreta de Calificaciones\n";
-        cadena = String.format("%sNombre: %s\nCalificaciones:\n", cadena,
-                obtenerEstudiante());
+        cadena = String.format("%sNombre: %s\nCalificaciones: ", cadena,
+                obtenerEstudiante().toUpperCase());
+//        for (int i = 0; i < obtenerCalificaciones().length; i++) {
+//            cadena = String.format("%s\t\t%.2f\n", cadena,
+//                    obtenerCalificaciones()[i]);
+//        }
         for (int i = 0; i < obtenerCalificaciones().length; i++) {
-            cadena = String.format("%s\t\t%.2f\n", cadena,
+            cadena = String.format("%s%.2f, ", cadena,
                     obtenerCalificaciones()[i]);
         }
-        cadena = String.format("%sPromedio calificaciones: %.2f\n"
+        cadena = String.format("%s\nPromedio calificaciones: %.2f y "
                 + "Promedio cuantitativo: %s\n",
                 cadena, obtenerPromedio(), obtenerPromedioCualitativo());
         return cadena;
