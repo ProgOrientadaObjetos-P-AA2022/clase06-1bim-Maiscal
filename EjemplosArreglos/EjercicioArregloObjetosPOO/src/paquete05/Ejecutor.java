@@ -7,7 +7,6 @@ package paquete05;
 
 public class Ejecutor {
     public static void main(String[] args) {
-              
         
         Calificacion c1 = new Calificacion(10, "Computación");
         Calificacion c2 = new Calificacion(10, "Lógica");
@@ -17,7 +16,10 @@ public class Ejecutor {
         Profesor profesor2 = new Profesor("Gregory Walsh", "nombramiento");
         Profesor profesor3 = new Profesor("Kevin Page", "nombramiento");
         
-                
+        c1.establecerProfesor(profesor1);
+        c2.establecerProfesor(profesor2);
+        c3.establecerProfesor(profesor3);
+        
         Calificacion [] lista = {c1, c2, c3}; 
         
         LibretaCalificacion libreta1 = new LibretaCalificacion("Justin Powers",
